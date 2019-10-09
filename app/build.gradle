@@ -1,0 +1,68 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.cv.cvconcept"
+        minSdkVersion 21
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    def appDependencies = rootProject.ext.appDependencies
+    def rxDependencies = rootProject.ext.rxDependencies
+    def diDependencies = rootProject.ext.diDependencies
+    def testDependencies = rootProject.ext.testDependencies
+    def parsersDependencies = rootProject.ext.parsersDependencies
+    def viewDependencies = rootProject.ext.viewDependencies
+
+    implementation appDependencies.legacySupportV4
+    implementation appDependencies.appcompat
+    implementation appDependencies.preference
+    implementation appDependencies.legacyPreferenceV14
+    implementation appDependencies.lifecycleExtentions
+    implementation appDependencies.lifecycleCompiler
+    implementation appDependencies.kotlin
+    implementation appDependencies.multidex
+
+    implementation viewDependencies.gridlayout
+    implementation viewDependencies.material
+    implementation viewDependencies.cardview
+    implementation viewDependencies.recyclerview
+    implementation viewDependencies.vectorDrawable
+    implementation viewDependencies.constraintLayout
+    implementation viewDependencies.fastAdapter
+    implementation viewDependencies.fastAdapterExtensions
+    implementation viewDependencies.fastAdapterCommons
+    implementation viewDependencies.navigationFragment
+    implementation viewDependencies.navigationUi
+
+    implementation rxDependencies.rxBinding
+    implementation rxDependencies.rxBindingKotlin
+    implementation rxDependencies.rxJava
+    implementation rxDependencies.rxAndroid
+
+    implementation diDependencies.dagger
+    kapt diDependencies.daggerCompiler
+
+    implementation parsersDependencies.gson
+
+    testImplementation testDependencies.jUnit
+    testImplementation testDependencies.mockito
+    testImplementation testDependencies.mockitoKotlin
+    testImplementation testDependencies.jsonAssert
+    testImplementation testDependencies.assertJ
+}
