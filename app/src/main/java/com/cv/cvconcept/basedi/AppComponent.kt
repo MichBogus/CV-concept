@@ -1,12 +1,13 @@
 package com.cv.cvconcept.basedi
 
 import android.content.Context
+import com.cv.cvconcept.basedi.module.SchedulerModule
 import com.cv.cvconcept.basedi.module.UtilsModule
 import com.cv.cvconcept.listofcvsactivity.di.ListOfCvsComponent
 import dagger.BindsInstance
 import dagger.Component
 
-@Component(modules = [UtilsModule::class])
+@Component(modules = [UtilsModule::class, SchedulerModule::class])
 interface AppComponent {
 
     fun addListOfCvsComponent(): ListOfCvsComponent

@@ -16,4 +16,14 @@ class ListOfCvsActivity : BaseActivity(), ListOfCvsActivityMVP.View {
 
         getApplicationComponent().addListOfCvsComponent().inject(this)
     }
+
+    override fun onStart() {
+        super.onStart()
+        presenter.attach(this)
+    }
+
+    override fun onStop() {
+        presenter.detach()
+        super.onStop()
+    }
 }

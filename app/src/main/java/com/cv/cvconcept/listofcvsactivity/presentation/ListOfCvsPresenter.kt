@@ -1,9 +1,10 @@
 package com.cv.cvconcept.listofcvsactivity.presentation
 
+import com.cv.cvconcept.listofcvsactivity.domain.CvInteractor
 import javax.inject.Inject
 
 class ListOfCvsPresenter
-@Inject constructor() : ListOfCvsActivityMVP.Presenter {
+@Inject constructor(private val interactor: CvInteractor) : ListOfCvsActivityMVP.Presenter {
 
     private var view: ListOfCvsActivityMVP.View? = null
 
