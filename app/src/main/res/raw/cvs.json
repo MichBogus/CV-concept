@@ -1,0 +1,115 @@
+[
+  {
+    "name": "Michał",
+    "surname": "Bogus",
+    "phone": "780158730",
+    "email": "michalbogus94@gmail.com",
+    "address": "Staromiejska 23A",
+    "zip-code": "42-400",
+    "city": "Zawiercie",
+    "quick-summary": "",
+    "education": [
+      {
+        "name": "Uniwersytet Śląski w Katowicach",
+        "specialisation": "Informatyka INŻ",
+        "date-from": "",
+        "date-to": ""
+      }
+    ],
+    "work-history": [
+      {
+        "name": "Software Development Academy",
+        "position": "Java Trainer",
+        "date-from": "09.2018",
+        "date-to": "current",
+        "description": ""
+      },
+      {
+        "name": "Farmaprom",
+        "position": "Android Developer",
+        "date-from": "10.2017",
+        "date-to": "current",
+        "description": ""
+      },
+      {
+        "name": "CodeFirst - Michał Bogus",
+        "position": "Owner",
+        "date-from": "10.2017",
+        "date-to": "current",
+        "description": "B2B contractor"
+      },
+      {
+        "name": "Perform Media",
+        "position": "Android Developer",
+        "date-from": "02.2017",
+        "date-to": "09.2017",
+        "description": ""
+      },
+      {
+        "name": "Kamsoft S.A",
+        "position": "Android Developer",
+        "date-from": "07.2015",
+        "date-to": "01.2017",
+        "description": ""
+      }
+    ],
+    "skills": [
+      {
+        "name": "Java"
+      },
+      {
+        "name": "Kotlin"
+      },
+      {
+        "name": "Android SDK"
+      },
+      {
+        "name": "SQL"
+      },
+      {
+        "name": "Dagger2"
+      },
+      {
+        "name": "Espresso"
+      },
+      {
+        "name": "Unit testing (TDD)"
+      },
+      {
+        "name": "Behavioral testing (BDD)"
+      }
+    ],
+    "projects": [
+      {
+        "name": "IZI",
+        "googleplaylink": "",
+        "description": "Application (CRM) for medical sales representatives"
+      },
+      {
+        "name": "DAZN",
+        "googleplaylink": "https://play.google.com/store/apps/developer?id=DAZN&hl=pl",
+        "description": "Application for sports streaming just like Netflix, big one with about 3,5 mln users around the world"
+      },
+      {
+        "name": "VisiMed",
+        "googleplaylink": "https://play.google.com/store/apps/details?id=com.kamsoft.zap&hl=pl",
+        "description": ""
+      },
+      {
+        "name": "TaxiMed",
+        "googleplaylink": "https://play.google.com/store/apps/details?id=com.kamsoft.taximed&hl=pl",
+        "description": ""
+      },
+      {
+        "name": "OSOZNews",
+        "googleplaylink": "https://play.google.com/store/apps/details?id=com.kamsoft.osoz.press&hl=pl",
+        "description": ""
+      },
+      {
+        "name": "KtoMaLek",
+        "googleplaylink": "https://play.google.com/store/apps/details?id=com.kamsoft.ktomalek&hl=pl",
+        "description": ""
+      }
+    ]
+  }
+]

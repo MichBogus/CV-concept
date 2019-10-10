@@ -37,6 +37,8 @@ dependencies {
     implementation appDependencies.lifecycleCompiler
     implementation appDependencies.kotlin
     implementation appDependencies.multidex
+    implementation appDependencies.lifecycleExtentions
+    annotationProcessor appDependencies.lifecycleCompiler
 
     implementation viewDependencies.gridlayout
     implementation viewDependencies.material

@@ -5,6 +5,7 @@ ext {
     androidx_preference_version = '1.1.0-beta01'
     androidx_lifecycle_version = '2.0.0'
     androidx_multidex_version = '2.0.1'
+    androidx_lifecycle_version = '2.0.0'
 
     kotlin_version = '1.3.10'
 
@@ -25,6 +26,8 @@ ext {
             lifecycleCompiler                   : "androidx.lifecycle:lifecycle-compiler:$androidx_lifecycle_version",
             kotlin                              : "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version",
             multidex                            : "androidx.multidex:multidex:$androidx_multidex_version",
+            lifecycleExtentions                 : "androidx.lifecycle:lifecycle-extensions:$androidx_lifecycle_version",
+            lifecycleCompiler                   : "androidx.lifecycle:lifecycle-compiler:$androidx_lifecycle_version",
     ]
 
     fast_adapter_version = '3.2.4@aar'
