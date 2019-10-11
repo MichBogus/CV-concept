@@ -1,7 +1,195 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent"
+                                                   android:orientation="vertical">
 
-</LinearLayout>
+    <TextView
+        android:id="@+id/name_surname_placeholder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name and Surname:"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/name_surname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        app:layout_constraintTop_toBottomOf="@+id/name_surname_placeholder"/>
+
+    <View
+        android:id="@+id/name_surname_underline"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@android:color/black"
+        app:layout_constraintEnd_toEndOf="@+id/name_surname"
+        app:layout_constraintStart_toStartOf="@+id/name_surname_placeholder"
+        app:layout_constraintTop_toBottomOf="@+id/name_surname"/>
+
+    <TextView
+        android:id="@+id/address_placeholder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/name_surname_underline"
+        android:text="Address:"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        app:layout_constraintTop_toBottomOf="@+id/address_placeholder"/>
+
+    <View
+        android:id="@+id/address_underline"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@android:color/black"
+        app:layout_constraintEnd_toEndOf="@+id/address"
+        app:layout_constraintStart_toStartOf="@+id/address_placeholder"
+        app:layout_constraintTop_toBottomOf="@+id/address"/>
+
+    <TextView
+        android:id="@+id/city_placeholder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/address_underline"
+        android:text="City:"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/city"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        app:layout_constraintTop_toBottomOf="@+id/city_placeholder"/>
+
+    <View
+        android:id="@+id/city_underline"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@android:color/black"
+        app:layout_constraintEnd_toEndOf="@+id/city"
+        app:layout_constraintStart_toStartOf="@+id/city_placeholder"
+        app:layout_constraintTop_toBottomOf="@+id/city"/>
+
+    <TextView
+        android:id="@+id/zip_placeholder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/city_underline"
+        android:text="Zip code:"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/zip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        app:layout_constraintTop_toBottomOf="@+id/zip_placeholder"/>
+
+    <View
+        android:id="@+id/zip_underline"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@android:color/black"
+        app:layout_constraintEnd_toEndOf="@+id/zip"
+        app:layout_constraintStart_toStartOf="@+id/zip_placeholder"
+        app:layout_constraintTop_toBottomOf="@+id/zip"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5"/>
+
+    <TextView
+        android:id="@+id/phone_placeholder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Phone:"
+        app:layout_constraintStart_toStartOf="@+id/guideline_center"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/guideline_center"
+        android:textColor="@android:color/black"
+        app:layout_constraintTop_toBottomOf="@+id/phone_placeholder"/>
+
+    <View
+        android:id="@+id/phone_underline"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@android:color/black"
+        app:layout_constraintEnd_toEndOf="@+id/phone"
+        app:layout_constraintStart_toStartOf="@+id/phone_placeholder"
+        app:layout_constraintTop_toBottomOf="@+id/phone"/>
+
+    <TextView
+        android:id="@+id/email_placeholder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/phone_underline"
+        android:text="Email:"
+        app:layout_constraintStart_toStartOf="@+id/guideline_center"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/guideline_center"
+        android:textColor="@android:color/black"
+        app:layout_constraintTop_toBottomOf="@+id/email_placeholder"/>
+
+    <View
+        android:id="@+id/email_underline"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@android:color/black"
+        app:layout_constraintEnd_toEndOf="@+id/email"
+        app:layout_constraintStart_toStartOf="@+id/email_placeholder"
+        app:layout_constraintTop_toBottomOf="@+id/email"/>
+
+    <TextView
+        android:id="@+id/quick_summary_placeholder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/email_underline"
+        android:text="Quick summary:"
+        app:layout_constraintStart_toStartOf="@+id/guideline_center"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/quick_summary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/guideline_center"
+        android:textColor="@android:color/black"
+        app:layout_constraintTop_toBottomOf="@+id/quick_summary_placeholder"/>
+
+    <View
+        android:id="@+id/quick_summary_underline"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@android:color/black"
+        app:layout_constraintEnd_toEndOf="@+id/quick_summary"
+        app:layout_constraintStart_toStartOf="@+id/quick_summary_placeholder"
+        app:layout_constraintTop_toBottomOf="@+id/quick_summary"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

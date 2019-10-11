@@ -7,22 +7,22 @@
 
     <fragment
             android:id="@+id/navigation_main_details"
-            android:name="com.cv.cvconcept.cvsummaryactivity.view.maindetailsfragment.MainDetailsFragment"
+            android:name="com.cv.cvconcept.cvsummaryactivity.view.maindetailsfragment.presentation.MainDetailsFragment"
             android:label="MainDetailsFragment"
             tools:layout="@layout/fragment_main_details"/>
     <fragment
             android:id="@+id/navigation_work_history"
-            android:name="com.cv.cvconcept.cvsummaryactivity.view.workplacefragment.WorkHistoryFragment"
+            android:name="com.cv.cvconcept.cvsummaryactivity.view.workplacefragment.presentation.WorkHistoryFragment"
             android:label="WorkHistoryFragment"
             tools:layout="@layout/fragment_work_history"/>
     <fragment
             android:id="@+id/navigation_skills"
-            android:name="com.cv.cvconcept.cvsummaryactivity.view.skillsfragment.SkillsFragment"
+            android:name="com.cv.cvconcept.cvsummaryactivity.view.skillsfragment.presentation.SkillsFragment"
             android:label="SkillsFragment"
             tools:layout="@layout/fragment_skills"/>
     <fragment
             android:id="@+id/navigation_projects"
-            android:name="com.cv.cvconcept.cvsummaryactivity.view.projectsfragment.ProjectsFragment"
+            android:name="com.cv.cvconcept.cvsummaryactivity.view.projectsfragment.presentation.ProjectsFragment"
             android:label="ProjectsFragment"
             tools:layout="@layout/fragment_projects"/>
     

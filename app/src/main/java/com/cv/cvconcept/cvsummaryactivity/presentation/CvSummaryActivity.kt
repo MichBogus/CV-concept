@@ -7,6 +7,8 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
 import com.cv.cvconcept.R
 import com.cv.cvconcept.base.BaseActivity
+import com.cv.cvconcept.cvsummaryactivity.di.CvSummaryActivityComponent
+import javax.inject.Inject
 import kotlinx.android.synthetic.main.activity_cv_summary.bottom_navigation as bottomNavigation
 
 class CvSummaryActivity : BaseActivity(), CvSummaryActivityMVP.View {
@@ -19,13 +21,31 @@ class CvSummaryActivity : BaseActivity(), CvSummaryActivityMVP.View {
         }
     }
 
+    @Inject
+    lateinit var presenter: CvSummaryActivityMVP.Presenter
+
+    lateinit var component: CvSummaryActivityComponent
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_cv_summary)
 
-        getApplicationComponent().addCvSummaryActivityComponent().inject(this)
+        component = getApplicationComponent().addCvSummaryActivityComponent()
+        component.inject(this)
 
         bottomNavigation.setupWithNavController(findNavController(R.id.container))
     }
+
+    override fun onStart() {
+        super.onStart()
+        presenter.attach(this, intent.extras?.getLong(CV_ID) ?: 0)
+    }
+
+    override fun onStop() {
+        presenter.detach()
+        super.onStop()
+    }
+
+    fun getActivityComponent() = component
 
 }

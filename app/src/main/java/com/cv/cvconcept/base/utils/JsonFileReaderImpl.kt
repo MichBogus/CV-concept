@@ -14,7 +14,7 @@ class JsonFileReaderImpl
     }
 
     private fun getAssetJsonData(inputStream: InputStream): String {
-        var json = ""
+        var json: String
         try {
             val size = inputStream.available()
             val buffer = ByteArray(size)

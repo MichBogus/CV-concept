@@ -1,5 +1,6 @@
 package com.cv.cvconcept.listofcvsactivity.presentation
 
+import com.cv.cvconcept.basedi.module.SchedulerModule.SchedulerIO
 import com.cv.cvconcept.basedi.module.SchedulerModule.SchedulerUI
 import com.cv.cvconcept.listofcvsactivity.domain.CvInteractor
 import io.reactivex.Scheduler
@@ -8,7 +9,8 @@ import javax.inject.Inject
 
 class ListOfCvsPresenter
 @Inject constructor(private val interactor: CvInteractor,
-                    @SchedulerUI private val schedulerUI: Scheduler) : ListOfCvsActivityMVP.Presenter {
+                    @SchedulerUI private val schedulerUI: Scheduler,
+                    @SchedulerIO private val schedulerIO: Scheduler) : ListOfCvsActivityMVP.Presenter {
 
     private var view: ListOfCvsActivityMVP.View? = null
     private val compositeDisposable = CompositeDisposable()
@@ -21,7 +23,8 @@ class ListOfCvsPresenter
 
     private fun getAvailableCvs() {
         compositeDisposable.add(interactor.getAvailableCvs()
-                                        .subscribeOn(schedulerUI)
+                                        .subscribeOn(schedulerIO)
+                                        .observeOn(schedulerUI)
                                         .subscribe({
                                                        if (it.isEmpty()) {
                                                            view?.showEmptyInfo()
