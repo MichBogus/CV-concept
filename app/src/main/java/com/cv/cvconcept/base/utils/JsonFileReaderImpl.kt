@@ -1,31 +1,31 @@
 package com.cv.cvconcept.base.utils
 
 import android.content.Context
-import java.io.*
+import java.io.IOException
+import java.io.InputStream
+import java.nio.charset.Charset
 import javax.inject.Inject
 
 class JsonFileReaderImpl
 @Inject constructor(val context: Context) : JsonFileReader {
 
     override fun read(jsonFileId: Int): String {
-        return readTextFile(context.resources.openRawResource(jsonFileId))
+        return getAssetJsonData(context.resources.openRawResource(jsonFileId))
     }
 
-    private fun readTextFile(inputStream: InputStream): String {
-        val outputStream = ByteArrayOutputStream()
-
-        val buffer = ByteArray(1024)
-        var lenght = 0
+    private fun getAssetJsonData(inputStream: InputStream): String {
+        var json = ""
         try {
-            while (lenght != -1) {
-                lenght = inputStream.read(buffer)
-                outputStream.write(buffer, 0, lenght)
-            }
-            outputStream.close()
+            val size = inputStream.available()
+            val buffer = ByteArray(size)
+            inputStream.read(buffer)
             inputStream.close()
-        } catch (e: IOException) {
-
+            json = String(buffer, Charset.forName("UTF-8"))
+        } catch (ex: IOException) {
+            ex.printStackTrace()
+            return ""
         }
-        return outputStream.toString()
+        return json
+
     }
 }

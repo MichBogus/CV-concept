@@ -4,5 +4,5 @@ import io.reactivex.Single
 
 interface CvInteractor {
 
-    fun getAvailableCvs(): Single<List<CvListDomain>>
+    fun getAvailableCvs(): Single<List<CvDomain>>
 }

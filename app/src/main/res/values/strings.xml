@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">cvconcept</string>
+
+    <string name="empty_cv_list">There is no CVs to show here</string>
 </resources>

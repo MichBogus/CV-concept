@@ -1,6 +1,6 @@
 package com.cv.cvconcept.listofcvsactivity.domain
 
-data class CvListDomain(
+data class CvDomain(
     val id: Long,
     val name: String,
     val surname: String,

@@ -7,10 +7,10 @@ import javax.inject.Inject
 class CvInteractorImpl
 @Inject constructor(private val repository: CvRepository) : CvInteractor {
 
-    override fun getAvailableCvs(): Single<List<CvListDomain>> =
+    override fun getAvailableCvs(): Single<List<CvDomain>> =
         Single.create { emitter ->
-            emitter.onSuccess(repository.mapJsonToModels().map {
-                CvListDomain(it.id, it.name, it.surname, it.phone, it.email)
+            emitter.onSuccess(repository.getCVs().listOfCvs.map {
+                CvDomain(it.id, it.name, it.surname, it.phone, it.email)
             })
         }
 }

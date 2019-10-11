@@ -1,8 +1,8 @@
 package com.cv.cvconcept.cvrepository
 
-import com.cv.cvconcept.cvrepository.model.CV
+import com.cv.cvconcept.cvrepository.model.CVs
 
 interface CvRepository {
 
-    fun mapJsonToModels(): List<CV>
+    fun getCVs(): CVs
 }

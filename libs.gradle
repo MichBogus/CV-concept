@@ -30,7 +30,7 @@ ext {
             lifecycleCompiler                   : "androidx.lifecycle:lifecycle-compiler:$androidx_lifecycle_version",
     ]
 
-    fast_adapter_version = '3.2.4@aar'
+    fast_adapter_version = '3.3.1'
 
     androidx_gridlayout_version = '1.0.0'
     androidx_cardview_version = '1.0.0'
