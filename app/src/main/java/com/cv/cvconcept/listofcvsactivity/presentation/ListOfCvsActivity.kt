@@ -5,6 +5,7 @@ import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.cv.cvconcept.R
 import com.cv.cvconcept.base.BaseActivity
+import com.cv.cvconcept.base.utils.ActivityNavigator
 import com.cv.cvconcept.listofcvsactivity.domain.CvDomain
 import com.cv.cvconcept.listofcvsactivity.view.CvListItem
 import com.mikepenz.fastadapter.commons.adapters.FastItemAdapter
@@ -16,6 +17,9 @@ class ListOfCvsActivity : BaseActivity(), ListOfCvsActivityMVP.View {
 
     @Inject
     lateinit var presenter: ListOfCvsActivityMVP.Presenter
+
+    @Inject
+    lateinit var navigator: ActivityNavigator
 
     private val adapter = FastItemAdapter<CvListItem>()
 
@@ -43,7 +47,11 @@ class ListOfCvsActivity : BaseActivity(), ListOfCvsActivityMVP.View {
     }
 
     override fun showCvList(list: List<CvDomain>) {
-        adapter.add(list.map { CvListItem(it) })
+        adapter.add(list.map {
+            CvListItem(it) { id ->
+                navigator.navigateToCvSummaryActivity(this@ListOfCvsActivity, id)
+            }
+        })
         adapter.notifyAdapterDataSetChanged()
     }
 

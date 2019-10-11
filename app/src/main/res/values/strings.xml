@@ -2,4 +2,8 @@
     <string name="app_name">cvconcept</string>
 
     <string name="empty_cv_list">There is no CVs to show here</string>
+    <string name="navigation_main_details">Main details</string>
+    <string name="navigation_work_history">Work history</string>
+    <string name="navigation_skills">Skills</string>
+    <string name="navigation_projects">Projects</string>
 </resources>

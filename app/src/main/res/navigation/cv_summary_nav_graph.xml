@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/cv_summary_nav_graph"
+            app:startDestination="@+id/navigation_main_details">
+
+    <fragment
+            android:id="@+id/navigation_main_details"
+            android:name="com.cv.cvconcept.cvsummaryactivity.view.maindetailsfragment.MainDetailsFragment"
+            android:label="MainDetailsFragment"
+            tools:layout="@layout/fragment_main_details"/>
+    <fragment
+            android:id="@+id/navigation_work_history"
+            android:name="com.cv.cvconcept.cvsummaryactivity.view.workplacefragment.WorkHistoryFragment"
+            android:label="WorkHistoryFragment"
+            tools:layout="@layout/fragment_work_history"/>
+    <fragment
+            android:id="@+id/navigation_skills"
+            android:name="com.cv.cvconcept.cvsummaryactivity.view.skillsfragment.SkillsFragment"
+            android:label="SkillsFragment"
+            tools:layout="@layout/fragment_skills"/>
+    <fragment
+            android:id="@+id/navigation_projects"
+            android:name="com.cv.cvconcept.cvsummaryactivity.view.projectsfragment.ProjectsFragment"
+            android:label="ProjectsFragment"
+            tools:layout="@layout/fragment_projects"/>
+    
+</navigation>

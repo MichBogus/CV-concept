@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+            android:id="@+id/navigation_main_details"
+            android:icon="@drawable/ic_main_details"
+            android:title="@string/navigation_main_details"/>
+
+    <item
+            android:id="@+id/navigation_work_history"
+            android:icon="@drawable/ic_workplace"
+            android:title="@string/navigation_work_history"/>
+
+    <item
+            android:id="@+id/navigation_skills"
+            android:icon="@drawable/ic_skills"
+            android:title="@string/navigation_skills"/>
+
+    <item
+            android:id="@+id/navigation_projects"
+            android:icon="@drawable/ic_projects"
+            android:title="@string/navigation_projects"/>
+</menu>
